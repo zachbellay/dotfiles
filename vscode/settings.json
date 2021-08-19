@@ -1,0 +1,52 @@
+{
+    "editor.tokenColorCustomizations": {
+        "[Deepdark Material Theme | Full Black Version]": {
+            "comments": "#d4922f"
+        }
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "breadcrumbs.enabled": true,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "explorer.confirmDragAndDrop": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "diffEditor.maxComputationTime": 0,
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": false,
+    "python.linting.flake8Enabled": true,
+    "workbench.editor.showTabs": true,
+    "editor.largeFileOptimizations": false,
+    "remote.SSH.logLevel": "trace",
+    "tabnine.experimentalAutoImports": true,
+    "kite.showWelcomeNotificationOnStartup": false,
+    "terminal.integrated.scrollback": 1000000,
+    "gitlens.hovers.currentLine.over": "line",
+    "workbench.colorTheme": "Deepdark Material Theme | Full Black Version",
+    "extensions.ignoreRecommendations": true,
+    "editor.formatOnSave": true,
+    // "python.languageServer": "Pylance",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Pylance",
+    "python.formatting.provider": "black",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "git.terminalAuthentication": false,
+    "gitlens.advanced.messages": {
+        "suppressRebaseSwitchToTextWarning": true
+    },
+    "settingsSync.ignoredExtensions": [],
+    "settingsSync.ignoredSettings": [],
+    "window.zoomLevel": 1,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "terminal.integrated.tabs.enabled": false,
+}
