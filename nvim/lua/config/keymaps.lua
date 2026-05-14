@@ -39,3 +39,9 @@ end
 vim.keymap.set("n", "<C-Bslash>", function()
   tmux_select_pane("l")
 end, { silent = true, desc = "Navigate to previous tmux pane" })
+
+vim.keymap.set("n", "<leader>cp", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied path: " .. path)
+end, { desc = "Copy current file path" })
