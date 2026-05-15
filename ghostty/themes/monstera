@@ -1,0 +1,26 @@
+# Monstera for Ghostty
+# Based on bvoigtlaender.monstera-theme for VS Code/Cursor.
+
+background = #e1ede1
+foreground = #1a3020
+cursor-color = #4a6020
+cursor-text = #e1ede1
+selection-background = #749c8c
+selection-foreground = #1a3020
+
+palette = 0=#1a3020
+palette = 1=#aa3731
+palette = 2=#448c27
+palette = 3=#968200
+palette = 4=#4b83cd
+palette = 5=#7a3e9d
+palette = 6=#237893
+palette = 7=#bfcfba
+palette = 8=#777777
+palette = 9=#c72e0f
+palette = 10=#4a6020
+palette = 11=#ab6526
+palette = 12=#1a85ff
+palette = 13=#bd9d7e
+palette = 14=#7ebd80
+palette = 15=#f3f3f3
