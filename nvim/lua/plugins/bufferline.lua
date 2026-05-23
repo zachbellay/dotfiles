@@ -5,7 +5,6 @@ return {
     keys = {
       { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous buffer" },
       { "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
-      { "<leader>bd", "<cmd>bdelete<cr>", desc = "Delete buffer" },
     },
     opts = {
       options = {
