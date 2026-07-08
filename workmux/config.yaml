@@ -1,0 +1,25 @@
+nerdfont: true
+theme:
+  scheme: default
+  mode: light
+agent: claude
+mode: window
+window_placement: rightmost
+window_prefix: ""
+status_format: true
+
+panes:
+  - command: nvim
+  - split: horizontal
+  - split: horizontal
+  - split: horizontal
+  - command: claude --dangerously-skip-permissions
+    split: horizontal
+    focus: true
+  - command: workmux-monorepo-layout
+    split: vertical
+
+sidebar:
+  position: left
+  width: 36
+  layout: tiles

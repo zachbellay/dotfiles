@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+sleep 0.4
+
+pane_count=$(tmux list-panes -t "$TMUX_PANE" -F '#{pane_id}' | wc -l | tr -d ' ')
+
+case "$pane_count" in
+  7)
+    tmux select-layout -t "$TMUX_PANE" 'b3c3,294x68,0,0{36x68,0,0,71,166x68,37,0,72,90x68,204,0[90x17,204,0{29x17,204,0,73,29x17,234,0,76,30x17,264,0,77},90x34,204,18,75,90x15,204,53,74]}'
+    ;;
+  6)
+    tmux select-layout -t "$TMUX_PANE" 'ab3d,294x68,0,0{203x68,0,0,78,90x68,204,0[90x17,204,0{29x17,204,0,79,29x17,234,0,82,30x17,264,0,83},90x34,204,18,81,90x15,204,53,80]}'
+    ;;
+esac
+
+exec "${SHELL:-/bin/bash}" -l

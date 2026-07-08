@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+prompt_file=$(mktemp "${TMPDIR:-/tmp}/workmux-prompt.XXXXXX")
+trap 'rm -f "$prompt_file"' EXIT
+
+printf '\033[1mNew workmux task\033[0m\n\n'
+printf 'Type the prompt, then press Ctrl-D to create the worktree.\n\n'
+cat >"$prompt_file"
+
+if [[ ! -s "$prompt_file" ]]; then
+  printf '\nCancelled.\n'
+  sleep 0.5
+  exit 0
+fi
+
+printf '\nCreating worktree from prompt...\n\n'
+workmux add --auto-name --prompt-file "$prompt_file"
+
+printf '\nPress Enter to close.'
+IFS= read -r _
