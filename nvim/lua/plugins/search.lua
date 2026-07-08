@@ -1,6 +1,15 @@
 return {
   {
     "folke/snacks.nvim",
+    keys = {
+      {
+        "<leader><space>",
+        function()
+          Snacks.picker.files({ cwd = vim.fn.getcwd() })
+        end,
+        desc = "Find Files (cwd)",
+      },
+    },
     opts = {
       lazygit = {
         win = {
@@ -22,6 +31,9 @@ return {
       },
       picker = {
         sources = {
+          files = {
+            hidden = true,
+          },
           grep = {
             regex = false,
           },
