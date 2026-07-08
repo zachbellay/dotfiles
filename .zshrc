@@ -3,6 +3,15 @@ ZSH_THEME="robbyrussell"
 
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt append_history
+setopt share_history
+setopt hist_ignore_dups
+setopt hist_reduce_blanks
+setopt extended_history
+
 export FORGIT_FZF_DEFAULT_OPTS="
 --tmux 100%,100%
 --layout reverse
