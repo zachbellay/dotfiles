@@ -161,6 +161,7 @@ local groups = {
   DiagnosticInfo = { fg = palette.blue },
   DiagnosticHint = { fg = palette.green_dark },
   DiagnosticOk = { fg = palette.green },
+  DiagnosticUnnecessary = {},
   DiagnosticUnderlineError = { undercurl = true, sp = palette.red_bright },
   DiagnosticUnderlineWarn = { undercurl = true, sp = palette.orange },
   DiagnosticUnderlineInfo = { undercurl = true, sp = palette.blue },
@@ -226,6 +227,9 @@ local treesitter_groups = {
   ["@variable"] = { fg = palette.fg },
   ["@variable.builtin"] = { fg = palette.purple },
   ["@variable.parameter"] = { fg = palette.fg },
+  ["@lsp.mod.unnecessary"] = {},
+  ["@lsp.mod.unnecessary.typescript"] = {},
+  ["@lsp.mod.unnecessary.typescriptreact"] = {},
 }
 
 for group, opts in pairs(groups) do
