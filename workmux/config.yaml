@@ -7,17 +7,11 @@ mode: window
 window_placement: rightmost
 window_prefix: ""
 status_format: true
+base_branch: main
 
 panes:
-  - command: nvim
-  - split: horizontal
-  - split: horizontal
-  - split: horizontal
   - command: claude --dangerously-skip-permissions
-    split: horizontal
     focus: true
-  - command: workmux-monorepo-layout
-    split: vertical
 
 sidebar:
   position: left
