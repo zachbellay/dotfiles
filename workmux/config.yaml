@@ -2,7 +2,13 @@ nerdfont: true
 theme:
   scheme: default
   mode: light
-agent: codex
+agent: codex-yolo
+agents:
+  codex-yolo:
+    type: codex
+    command: codex
+    args:
+      - --dangerously-bypass-approvals-and-sandbox
 mode: window
 window_placement: rightmost
 window_prefix: ""
@@ -10,7 +16,7 @@ status_format: true
 base_branch: main
 
 panes:
-  - command: codex --dangerously-bypass-approvals-and-sandbox
+  - command: <agent>
     focus: true
 
 auto_name:
