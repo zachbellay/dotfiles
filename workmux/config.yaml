@@ -2,7 +2,7 @@ nerdfont: true
 theme:
   scheme: default
   mode: light
-agent: claude
+agent: codex
 mode: window
 window_placement: rightmost
 window_prefix: ""
@@ -10,7 +10,7 @@ status_format: true
 base_branch: main
 
 panes:
-  - command: claude --dangerously-skip-permissions
+  - command: codex --dangerously-bypass-approvals-and-sandbox
     focus: true
 
 sidebar:
