@@ -1,0 +1,14 @@
+{
+  "background": "#1c1c1c",
+  "text": "#eeeeee",
+  "muted": "#bcbcbc",
+  "selection_background": "#005faf",
+  "selection_text": "#ffffff",
+  "red": "#ff8787",
+  "yellow": "#ffdf87",
+  "green": "#afffaf",
+  "teal": "#87ffff",
+  "blue": "#afd7ff",
+  "accent": "#d7d7d7",
+  "mauve": "#d7afff"
+}

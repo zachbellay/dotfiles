@@ -1,0 +1,84 @@
+onboarding = false
+
+[keys]
+prefix = "ctrl+b"
+split_horizontal = 'prefix+"'
+split_vertical = "prefix+%"
+
+focus_pane_left = ["prefix+h", "ctrl+h"]
+focus_pane_down = ["prefix+j", "ctrl+j"]
+focus_pane_up = ["prefix+k", "ctrl+k"]
+focus_pane_right = ["prefix+l", "ctrl+l"]
+
+workspace_picker = "prefix+a"
+goto = ["prefix+w", "prefix+g"]
+toggle_sidebar = ["prefix+b", "prefix+shift+b"]
+previous_tab = ""
+
+navigate_workspace_up = ["up", "ctrl+k"]
+navigate_workspace_down = ["down", "ctrl+j"]
+navigate_pane_left = ["h", "ctrl+h"]
+navigate_pane_right = ["l", "ctrl+l"]
+
+[[keys.command]]
+key = "prefix+{"
+type = "shell"
+command = "python3 ~/.config/herdr/swap-pane.py previous"
+description = "swap with previous pane"
+
+[[keys.command]]
+key = "prefix+}"
+type = "shell"
+command = "python3 ~/.config/herdr/swap-pane.py next"
+description = "swap with next pane"
+
+[[keys.command]]
+key = ["prefix+i", "prefix+shift+i"]
+type = "shell"
+command = "herdr plugin pane open --plugin herdr-agent-inbox --entrypoint inbox"
+description = "open agent inbox"
+
+[[keys.command]]
+key = "prefix+m"
+type = "plugin_action"
+command = "herdr-agent-inbox.settle"
+description = "settle current agent"
+
+[[keys.command]]
+key = "prefix+shift+m"
+type = "plugin_action"
+command = "herdr-agent-inbox.unread"
+description = "mark current agent unread"
+
+[[keys.command]]
+key = "prefix+alt+m"
+type = "plugin_action"
+command = "herdr-agent-inbox.settle-workspace"
+description = "settle finished agents in this space"
+
+[[keys.command]]
+key = "prefix+p"
+type = "shell"
+command = "python3 ~/.config/herdr/toggle-pr-panel.py"
+description = "toggle full-height PR checks on the right"
+
+[ui]
+sidebar_collapsed_mode = "hidden"
+pane_outer_borders = true
+
+[ui.sidebar.agents]
+rows = [
+  ["state_icon", "$title"],
+  ["$flag", "agent", "machine", "workspace", "tab", { token = "$age", dim = true }],
+]
+
+[ui.sidebar.spaces]
+rows = [
+  ["state_icon", "workspace", "$agents", { token = "$busy", dim = true },
+   { token = "$ci_pass", fg = "#afffaf", bold = true },
+   { token = "$ci_fail", fg = "#ff8787", bold = true },
+   { token = "$ci_run", fg = "#ffdf87" },
+   { token = "$ci_merged", fg = "#d7afff" },
+   { token = "$ci_open", fg = "#afd7ff" }],
+  ["branch", "git_status"],
+]
